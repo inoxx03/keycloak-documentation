@@ -20,4 +20,3 @@ Verify Email::
 
 Update Profile::
    The user must update profile information, such as name, address, email, and phone number.
-
