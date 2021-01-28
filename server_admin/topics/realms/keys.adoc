@@ -105,7 +105,9 @@ To add a key pair and certificate stored in a Java Keystore file:
 
 ==== Compromised keys
 
-{project_name} has its signing keys stored locally. The signing keys are never shared with client applications, users or other entities. If your realm signing key is compromised,  <<adding-a-generated-key-pair, generate a new key>> and then immediately remove the compromised key.
+{project_name} has the signing keys stored just locally and they are never shared with the client applications, users or other
+entities. However if you think that your realm signing key was compromised, you should first generate new keypair as described above and
+then immediately remove the compromised keypair.
 
 To ensure that client applications do not accept the tokens signed by compromised keys, update and push the not-before policy for the realm.
 
