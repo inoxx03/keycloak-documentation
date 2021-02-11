@@ -1,5 +1,5 @@
 [[_admin_permissions]]
 
-== Admin Console Access Control and Permissions
+== Controlling Access to the Admin Console
 
 Each realm in {project_name} has an Admin Console to manage the realm.
