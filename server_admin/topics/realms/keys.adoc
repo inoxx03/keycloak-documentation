@@ -1,6 +1,6 @@
 
 [[realm_keys]]
-=== Realm Keys
+=== Configuring realm keys
 
 {project_name}'s authentication protocols require cryptographic signatures and, in some cases, encryption.  {project_name} implements asymmetric key pairs (a private and public key) to address this situation.
 
@@ -9,7 +9,7 @@ When {project_name} creates a realm, a key pair and a self-signed certificate ar
 To view the active keys for a realm, perform the following:
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click *Realm settings*.
 . Click *Keys*.
 . Click *Passive* to view passive keys.
@@ -33,13 +33,13 @@ Applications using offline refresh tokens must refresh the tokens before old key
 To add a new generated key pair:
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click *Realm settings*.
 . Click the *Keys* tab.
 . Click the *Providers* tab.
-. Click *Add keystore* and select `rsa-generated`. 
-. Enter a number in the `Priority` field. This number determines if the new key pair becomes the active key pair.
-. Select a value for `keysize`.
+. Click *Add keystore* and select *rsa-generated*. 
+. Enter a number in the *Priority* field. This number determines if the new key pair becomes the active key pair.
+. Select a value for *keysize*.
 . Click *Save*.
 
 Clicking *Save* generates a new key pair. The new key pair includes a new self-signed certificate.
@@ -50,18 +50,18 @@ Changing the priority does not regenerate the keys but changing the key size wil
 
 To add a key pair and certificate generated outside of {project_name}:
 
-. Prerequisites
+.Prerequisites
 * A private key file. The file must be PEM formatted.
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click *Realm settings*.
 . Click the *Keys* tab.
 . Click the *Providers* tab.
 . Click *Add keystore* and select *rsa*. 
 . Enter a number in the *Priority* field. This number determines if the new key pair becomes the active key pair.
 . Click *Select file* beside *Private RSA Key* to upload the private key file.
-. If you have a signed certificate for your private key,  click *Select file* beside `X509 Certificate` to upload the certificate file. {project_name} autmatically generates a self-signed certificate if you do not upload a certificate.
+. If you have a signed certificate for your private key,  click *Select file* beside *X509 Certificate* to upload the certificate file. {project_name} autmatically generates a self-signed certificate if you do not upload a certificate.
 . Click *Save*.
 
 ==== Loading keys from a Java Keystore
@@ -69,22 +69,22 @@ To add a key pair and certificate generated outside of {project_name}:
 To add a key pair and certificate stored in a Java Keystore file:
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click *Realm settings*.
 . Click the *Keys* tab.
 . Click the *Providers* tab.
-. Click *Add keystore* and select `java-keystore`. 
-. Enter a number in the `Priority` field. This number determines if the new key pair becomes the active key pair.
-. Enter a value for `Keystore`.
-. Enter a value for `Keystore Password`.
-. Enter a value for `Key Alias`.
-. Enter a value for `Key Password`.
+. Click *Add keystore* and select *java-keystore*. 
+. Enter a number in the *Priority* field. This number determines if the new key pair becomes the active key pair.
+. Enter a value for *Keystore*.
+. Enter a value for *Keystore Password*.
+. Enter a value for *Key Alias*.
+. Enter a value for *Key Password*.
 . Click *Save*.
 
 ==== Making keys passive
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click Realm settings.
 . Click the *Keys* tab.
 . Click the *Active* tab.
@@ -95,7 +95,7 @@ To add a key pair and certificate stored in a Java Keystore file:
 ==== Disabling keys
 
 .Procedure
-. Select the realm in the admin console.
+. Select the realm in the Admin Console.
 . Click Realm settings.
 . Click the *Keys* tab.
 . Click the *Active* tab.
@@ -106,7 +106,7 @@ To add a key pair and certificate stored in a Java Keystore file:
 ==== Compromised keys
 
 {project_name} has the signing keys stored just locally and they are never shared with the client applications, users or other
-entities. However if you think that your realm signing key was compromised, you should first generate new keypair as described above and
+entities. However, if you think that your realm signing key was compromised, you should first generate new keypair as described above and
 then immediately remove the compromised keypair.
 
 To ensure that client applications do not accept the tokens signed by compromised keys, update and push the not-before policy for the realm.
@@ -122,5 +122,5 @@ Pushing the not-before policy ensures that client applications do not accept the
 
 [NOTE]
 ====
-REST and confidential clients must set `Admin URL` so {project_name} can send clients the pushed not-before policy request.
+REST and confidential clients must set *Admin URL* so {project_name} can send clients the pushed not-before policy request.
 ====
