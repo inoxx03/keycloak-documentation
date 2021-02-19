@@ -1,8 +1,8 @@
 [[_account-service]]
 
-== User Account Service
+== Account Console
 
-{project_name} has a built-in User Account Service which every user has access to.  This service allows users to manage their account,
+{project_name} has a built-in Account Console which every user has access to.  This service allows users to manage their account,
 change their credentials, update their profile, and view their login sessions.  The URL to this service is `<server-root>/auth/realms/{realm-name}/account`.
 
 .Account Service
@@ -41,6 +41,6 @@ image:{project_images}/account-service-apps.png[]
 
 === Themeable
 
-Like all UIs in {project_name}, the User Account Service is completely themeable and internationalizable.
+Like all UIs in {project_name}, the Account Console is completely themeable and internationalizable.
 See the link:{developerguide_link}[{developerguide_name}] for more details.
 

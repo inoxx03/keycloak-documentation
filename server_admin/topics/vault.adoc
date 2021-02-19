@@ -1,7 +1,7 @@
 
 [[_vault-administration]]
 
-== Using Vault to Obtain Secrets
+== Using vault to obtain secrets
 
 To obtain a secret from a vault rather than entering it directly, enter the following specially crafted string into the appropriate field:
 
