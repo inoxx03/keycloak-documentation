@@ -1,5 +1,5 @@
 
-=== How Does Security Work?
+=== Basic {project_name} operations
 
 {project_name} is a separate server that you manage on your network.  Applications are configured to point to and
 be secured by this server.  {project_name} uses open protocol standards like link:https://openid.net/connect/[OpenID Connect]
