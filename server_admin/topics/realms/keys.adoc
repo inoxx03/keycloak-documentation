@@ -26,7 +26,9 @@ Rotate keys regularly by:
 
 When new keys are available, {project_name} signs new tokens and cookies with the new keys. When users authenticate an application, {project_name} updates the SSO cookie with the new signature. When {project_name} refreshes OpenID Connect tokens, the new tokens are signed with the new keys. Over time, all cookies and tokens use the new keys and eventually, all old keys can be removed. 
 
-Applications using offline refresh tokens must refresh the tokens before old keys are removed.
+The frequency of deleting old keys is a tradeoff between security and making sure all cookies and tokens are updated. Consider creating new keys every three to six months and deleting old keys one to two months after you create the new keys. If a user was inactive in the period between the new keys being added and the old keys being removed, that user will have to re-authenticate.
+
+Rotating keys also applies to offline tokens. To make sure they are updated, the applications need to refresh the tokens before the old keys are removed.
 
 ==== Adding a generated key pair
 
